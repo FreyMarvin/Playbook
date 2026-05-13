@@ -1,9 +1,5 @@
-# inventory.yml
-
 all:
   hosts:
-    mein-pc:
-      ansible_host: 10.71.31.66
-      ansible_user: semaphoreClient
-      ansible_connection: ssh
-      ansible_python_interpreter: /usr/bin/python3
+    ansible_host: 10.71.31.66
+    ansible_user: semaphoreClient 
+    ansible_connection: ssh
