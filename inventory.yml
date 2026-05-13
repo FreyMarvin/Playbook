@@ -1,3 +1,3 @@
 windows: 
   hosts: 
-      ansible_host: 10.71.31.66: 
+      ansible_host: 10.71.31.66
