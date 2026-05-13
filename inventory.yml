@@ -1,0 +1,8 @@
+windows:
+  hosts:
+      ansible_host: 10.71.31.66:
+      #ansible_user: Administrator
+      #ansible_password: YourPassword
+      #ansible_connection: winrm
+      #ansible_winrm_transport: ntlm
+      #ansible_winrm_server_cert_validation: ignore
