@@ -1,5 +1,5 @@
 - name: Install 7-Zip on Windows
-  hosts: windows
+  hosts: 10.71.31.66
   tasks:
     - name: Ensure 7-Zip is installed (MSI)
       ansible.windows.win_package:
