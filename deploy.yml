@@ -1,9 +1,19 @@
 - name: Install 7-Zip on Windows
   hosts: windows
   tasks:
-    - name: Ensure 7-Zip is installed (MSI)
-      ansible.windows.win_package:
-        path: https://www.7-zip.org/a/7z2301-x64.msi
-        product_id: "{23170F69-40C1-2702-2301-000001000000}"
-        state: present
-        arguments: /qn
+  
+    - name: Create a Folder
+      win_file:
+        path: "c:\installs"
+        state: "directory"
+        creates: "c:\installs"
+
+    - name: Copy Installler
+      win_copy:
+        src: "/home/semaphoreadmin/7z.exe"
+        dest: "c:\installs"
+        creates: "c:\installs\7z.exe"
+
+    - name: install 7zip
+      win_package:
+        path: "c:\installs\7z.exe
