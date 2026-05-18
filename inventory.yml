@@ -4,6 +4,6 @@ windows:
       vars:
         ansible_connection: winrm
         ansible_winrm_server_cert_validation: ignore
-        ansible_user: semaClient@demoschool.de
+        ansible_user: semaClient
         ansible_password: 1!demo
         ansible_winrm_transport: ntlm
