@@ -1,1 +1,20 @@
+- name: Install Adobe Reader
+  hosts: windows
+  tasks:
+  
+    - name: Create a Folder
+      win_file:
+        path: "c:\\installs"
+        state: "directory"
+        creates: "c:\\installs"
 
+    - name: Copy Files
+      - win_copy:
+          src: "/srv/7z.msi"
+          dest: "c:\\installs"
+          creates: "c:\\installs\\7z.msi"
+
+    - name: install 7zip
+      ansible.windows.win_package:
+        path: "c:\\installs\\7z.msi"
+        state: "present"
