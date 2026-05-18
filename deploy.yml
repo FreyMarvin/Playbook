@@ -10,15 +10,12 @@
 
     - name: Copy Installler
       win_copy:
-        src: "/srv/7z.exe"
+        src: "/srv/7z.msi"
         dest: "c:\\installs"
         creates: "c:\\installs\\7z.msi"
 
     - name: install 7zip
       win_package:
-        path: "c:\\installs\\7z.exe"
+        path: "c:\\installs\\7z.msi"
         arguments: /silent
         state: "present"
-        become: yes
-        become_method: runas
-        become_user: SYSTEM
