@@ -1,3 +1,9 @@
 windows: 
   hosts: 
       10.71.31.66:
+      vars:
+        ansible_connection: winrm
+        ansible_winrm_server_cert_validation: ignore
+        ansible_user: semaClient
+        ansible_password: 1!demo
+        ansible_winrm_transport: credssp
