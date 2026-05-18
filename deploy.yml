@@ -19,3 +19,6 @@
         path: "c:\\installs\\7z.exe"
         arguments: /silent
         state: "present"
+        become: yes
+        become_method: runas
+        become_user: SYSTEM
