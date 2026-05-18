@@ -6,14 +6,14 @@
       win_file:
         path: "c:\\installs"
         state: "directory"
-        creates: "c:\installs"
+        creates: "c:\\installs"
 
     - name: Copy Installler
       win_copy:
         src: "/home/semaphoreadmin/7z.exe"
         dest: "c:\\installs"
-        creates: "c:\installs\7z.exe"
+        creates: "c:\\installs\\7z.exe"
 
     - name: install 7zip
       win_package:
-        path: "c:\\installs\7z.exe
+        path: "c:\\installs\\7z.exe
