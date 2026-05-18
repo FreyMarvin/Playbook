@@ -17,5 +17,5 @@
     - name: install 7zip
       ansible.windows.win_package:
         path: "c:\\installs\\7z.msi"
-        arguments: "/q INSTALLDIR="C:\Program Files\7-Zip"
+        arguments: "/q INSTALLDIR=\"C:\Program Files\7-Zip\""
         state: "present"
