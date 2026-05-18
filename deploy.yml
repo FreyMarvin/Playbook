@@ -12,7 +12,7 @@
       win_copy:
         src: "/srv/7z.exe"
         dest: "c:\\installs"
-        creates: "c:\\installs\\7z.exe"
+        creates: "c:\\installs\\7z.msi"
 
     - name: install 7zip
       win_package:
