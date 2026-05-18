@@ -16,6 +16,6 @@
 
     - name: install 7zip
       win_package:
-        path: "c:\\installs\\7z.exe
+        path: "c:\\installs\\7z.exe"
         arguments: /silent
         state: "present"
