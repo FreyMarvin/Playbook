@@ -14,11 +14,13 @@
         dest: "c:\\installs"
         creates: "c:\\installs\\7z.exe"
 
-    - name: install 7zip
+    - name: become
       become: true
+      become_method: runas
       become_user: administrator
       become_password: 1!demo
-      become_method: runas
+
+    - name: Install
       ansible.windows.win_package:
         path: "c:\\installs\\7z.exe"
         state: "present"
