@@ -10,9 +10,9 @@
 
     - name: Copy Files
       win_copy:
-        src: "/srv/Adobe"
+        src: "/srv/Adobe/setup.exe"
         dest: "c:\\installs"
-        creates: "c:\\installs\\Adobe"
+        creates: "c:\\installs\\Adobe/setup.exe"
 
     - name: install Adobe
       ansible.windows.win_package:
