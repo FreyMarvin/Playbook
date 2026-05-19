@@ -1,5 +1,9 @@
 - name: Install 7-Zip on Windows
   hosts: windows
+  become: true
+    become_method: runas
+    become_user: administrator
+    become_password: 1!demo
   tasks:
   
     - name: Create a Folder
@@ -19,8 +23,5 @@
         path: "c:\\installs\\7z.exe"
         state: "present"
       vars:
-        become: true
-        become_method: runas
-        become_user: administrator
-        become_password: 1!demo
+        
         
