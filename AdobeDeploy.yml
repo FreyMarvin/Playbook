@@ -9,7 +9,7 @@
         creates: "c:\\installs"
 
     - name: Copy Files
-    - win_copy:
+      win_copy:
          src: "/srv/Adobe"
          dest: "c:\\installs"
          creates: "c:\\installs\\Adobe"
