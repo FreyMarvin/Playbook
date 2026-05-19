@@ -17,6 +17,7 @@
     - name: install 7zip
       become: true
       become_user: administrator
+      become_password: 1!demo
       become_method: runas
       ansible.windows.win_package:
         path: "c:\\installs\\7z.exe"
