@@ -10,11 +10,11 @@
 
     - name: Copy Files
       - win_copy:
-          src: "/srv/7z.msi"
+          src: "/srv/Adobe"
           dest: "c:\\installs"
-          creates: "c:\\installs\\7z.msi"
+          creates: "c:\\installs\\Adobe"
 
-    - name: install 7zip
+    - name: install Adobe
       ansible.windows.win_package:
-        path: "c:\\installs\\7z.msi"
+        path: "c:\\installs\\setup.exe"
         state: "present"
