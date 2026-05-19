@@ -15,13 +15,12 @@
         creates: "c:\\installs\\7z.exe"
 
     - name: install 7z
-
       ansible.windows.win_package:
         path: "c:\\installs\\7z.exe"
         state: "present"
-        vars:
-          become: true
-          become_method: runas
-          become_user: administrator
-          become_password: 1!demo
+      vars:
+        become: true
+        become_method: runas
+        become_user: administrator
+        become_password: 1!demo
         
