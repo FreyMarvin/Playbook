@@ -10,7 +10,7 @@
 
     - name: Copy Installler
       win_copy:
-        src: "/srv/7z/7z.msi"
+        src: "/srv/7z.msi"
         dest: "c:\\installs"
         creates: "c:\\installs\\7z.msi"
 
