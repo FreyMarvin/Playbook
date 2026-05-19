@@ -1,5 +1,7 @@
 - name: Install 7-Zip on Windows
   hosts: windows
+  become: true
+  become_method: runas
   tasks:
   
     - name: Create a Folder
